@@ -1,0 +1,230 @@
+@property --baby-blue {
+    syntax: "<color>";
+    initial-value: #7DCEF3;
+    inherits: false;
+}
+
+@property --dark-blue {
+    syntax: "<color>";
+    initial-value: #003E6D;
+    inherits: false;
+}
+
+@property --background-color {
+    syntax: "<color>";
+    initial-value: #E5F2F8;
+    inherits: false;
+}
+
+@property --input-placeholder-color {
+    syntax: "<color>";
+    initial-value: #5B8DA5;
+    inherits: false;
+}
+
+@property --input-border-color {
+    syntax: "<color>";
+    initial-value: #5B8DA554;
+    inherits: false;
+}
+
+@property --button-bg-color {
+    syntax: "<color>";
+    initial-value: #FF763C;
+    inherits: false;
+}
+
+@property --button-font-color {
+    syntax: "<color>";
+    initial-value: #001A2E;
+    inherits: false;
+}
+
+@font-face {
+    font-family: MessinaSans;
+    src: url(./assets/fonts/MessinaSans-Regular.woff);
+}
+
+body {
+    margin: 0;
+    font-family: MessinaSans;
+}
+
+.main-container {
+    width: 1440px;
+    background-color: var(--background-color);
+    background-image: url(./assets/tilde.png);
+    background-repeat: no-repeat;
+    background-position: 0 1024px;
+}
+
+.page-header {
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px;
+    color: var(--dark-blue);
+    background-color: var(--baby-blue);
+}
+
+.front-page {
+    padding: 60px 120px;
+    position: relative;
+    height: 1090px;
+}
+
+    .front-page .front-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    .front-page .logo {
+        z-index: 1;
+    }
+
+    .front-page .menu {
+        position: absolute;
+        z-index: 1;
+        right: 120px;
+        cursor: pointer;
+    }
+
+    .front-page .front-page-desc {
+        position: relative;
+        z-index: 1;
+        width: 1000px;
+    }
+
+        .front-page .front-page-desc h1 {
+            font-size: 100px;
+            color: var(--dark-blue);
+            margin: 80px 0 0px;
+            font-family: math;
+        }
+
+            .front-page .front-page-desc h1 span {
+                background-color: var(--baby-blue);
+                padding: 0 20px;
+            }
+
+        .front-page .front-page-desc p {
+            font-size: 24px;
+            color: var(--dark-blue);
+            line-height: 40px;
+            width: 40%;
+            margin: 60px 0;
+        }
+
+.learn-more-form {
+    position: relative;
+    z-index: 1;
+}
+
+    .learn-more-form input {
+        font-size: 24px;
+        line-height: 42px;
+        padding: 16px 24px;
+        color: var(--dark-blue);
+        width: 350px;
+        border: 1px solid var(--input-border-color);
+        border-radius: 5px 0 0 5px;
+    }
+
+        .learn-more-form input::placeholder {
+            color: var(--input-placeholder-color);
+        }
+
+    .learn-more-form button {
+        width: 220px;
+        vertical-align: top;
+        color: var(--button-font-color);
+        background-color: var(--button-bg-color);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 42px;
+        padding: 16px 24px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid var(--button-bg-color);
+        cursor: pointer;
+    }
+
+        .learn-more-form button:hover {
+            background-color: gold;
+            border: 1px solid gold;
+        }
+
+.expand-page {
+    padding: 0px 160px 0 628px;
+    position: relative;
+    height: 870px;
+    background-image: url(./assets/expand.png);
+    background-repeat: no-repeat;
+}
+
+    .expand-page .expand-desc h1 {
+        font-size: 56px;
+        line-height: 64px;
+        color: var(--dark-blue);
+        font-family: math;
+        font-weight: 300;
+    }
+
+        .expand-page .expand-desc h1 span {
+            background-color: var(--baby-blue);
+            padding: 0 3px;
+        }
+
+    .expand-page .expand-desc p {
+        font-size: 20px;
+        line-height: 32px;
+        color: var(--dark-blue);
+    }
+
+@media only screen and (max-width: 640px) {
+    .page-header {
+        height: 50px;
+        line-height: 50px;
+        font-size: 30px;
+    }
+    .front-page {
+        padding: 36px;
+    }
+    .front-page .front-page-desc {
+        width: 100%;
+    }
+        .front-page .menu {
+            right: 48px;
+        }
+        .front-page .front-page-desc p {
+            font-size: 36px;
+            width: 45%;
+        }
+
+    .learn-m45e-form input {
+        font-size: 30px;
+    }
+
+    .learn-more-form button {
+        font-size: 30px;
+    }
+
+    .expand-page {
+        padding: 0px 36px;
+        position: relative;
+        height: 870px;
+        background-image: none;
+    }
+
+        .expand-page .expand-desc h1 {
+            font-size: 84px;
+            line-height: 100px;
+            color: var(--dark-blue);
+        }
+
+        .expand-page .expand-desc p {
+            font-size: 36px;
+            line-height: 48px;
+        }
+}
